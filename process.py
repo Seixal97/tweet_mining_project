@@ -1,5 +1,4 @@
 import re
-import logging as log
 import pandas as pd
 
 
@@ -96,8 +95,8 @@ class BasicPreprocessor(object):
         
     def remove_repeated_ponctuation(self, df, column_name:str, replacement=''):          
         """
-        Short all repetitions of punctuations and insert the signal _PUNCT_REPEATED_ (default)
-        Ex. hoooo! my God!????? becomes hoooo! my God!? _PUNCT_REPEATED_
+        Remover pontuação repetida
+        Exemplo. "hoooo! my God!?????" --> "hoooo! my God!?"
         """
         df[column_name] = df[column_name].apply(lambda tweet_text: re.sub(r'([!?.]){2,}', r'\g<1>'+replacement, tweet_text))
     
@@ -205,3 +204,48 @@ class BasicPreprocessor(object):
             return str(correct_sentence)
 
         df[column_name] = df[column_name].apply(correct_spelling_aux)
+
+
+
+def lemma_tokenizer(df, column_name):
+    '''
+    Tokenização + lemmatização
+    '''
+    def lemma_tokenizer_aux(text):
+        from nltk.tokenize import word_tokenize
+        from nltk.stem import WordNetLemmatizer
+        
+        res = list()
+
+        #criar tokens
+        tokens = word_tokenize(text)
+
+        #lemmatizer
+        lemmatizer = WordNetLemmatizer()
+        for token in tokens:
+            res.append(lemmatizer.lemmatize(token))
+        return res
+
+
+    df[column_name] = df[column_name].apply(lemma_tokenizer_aux)
+
+
+
+def remove_stopwords(df, column_name):
+    '''
+    Remoção de stopwords
+    '''
+    def remove_stopwords_aux(original_sentence):
+        from nltk.corpus import stopwords
+
+        stop_words = set(stopwords.words('english'))
+        filtered_sentence = list()
+
+        for word in original_sentence:
+            if word not in stop_words:
+                filtered_sentence.append(word)
+
+        return filtered_sentence
+        
+
+    df[column_name] = df[column_name].apply(remove_stopwords_aux)
