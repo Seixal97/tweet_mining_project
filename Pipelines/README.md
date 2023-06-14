@@ -1,7 +1,7 @@
-pipeline_data_analysis -> análise da estrutura e conteúdos dos tweets dos datasets de treino e teste
+pipeline_data_analysis.ipynb -> análise da estrutura e conteúdos dos tweets dos datasets de treino e teste
 
-pipeline_default -> modelos default
+pipeline_default.ipynb  -> modelos default
 
-pipeline_smote -> modelos com otimização de hiperparâmetros e SMOTE
+pipeline_smote.ipynb  -> modelos com otimização de hiperparâmetros e SMOTE
 
-pipeline_without_smote -> modelos apenas com otimização de hiperparâmetros
+pipeline_without_smote.ipynb  -> modelos apenas com otimização de hiperparâmetros
