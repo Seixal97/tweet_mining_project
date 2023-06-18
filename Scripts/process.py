@@ -59,7 +59,7 @@ class BasicPreprocessor(object):
     
     def split_slash(self, df, column_name:str):
         """
-        Acresentar espaçoes entre '/'. Realizar apenas depois de remover os urls
+        Acresentar espaços entre '/'. Realizar apenas depois de remover os urls
         """
         df[column_name] = df[column_name].apply(lambda tweet_text: re.sub(r'/', ' / ', tweet_text))
         
