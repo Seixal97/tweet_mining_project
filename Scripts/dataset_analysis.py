@@ -41,7 +41,7 @@ def wordcloud(df, tweet_column, label_column, plot_title, background_color):
 
 def get_top_n_words(corpus, n=None, n_grams = 1, stopwords_removal = True):
     '''
-    Obter os n-gramas mais comuns no dataset
+    Obter os n-grams mais comuns no dataset
     '''
     from sklearn.feature_extraction.text import CountVectorizer
 
@@ -58,7 +58,7 @@ def get_top_n_words(corpus, n=None, n_grams = 1, stopwords_removal = True):
 
 def n_gram_analysis(df, dataset_title, label_column, stopwords_removal, n_grams = 1):
     '''
-    Análise gráfica dos n-gramas mais comuns
+    Análise gráfica dos n-grams mais comuns
     '''
     import matplotlib.pyplot as plt
     import pandas as pd
