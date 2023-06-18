@@ -1,6 +1,9 @@
 import pandas as pd
 
 def insert_column(dataframe, new_column, column_name, dummies=False, label_prefix=None):
+    '''
+    Função auxiliar para inserção de colunas em dataset
+    '''
     indexes = list(dataframe.index.values)
     dataframe[column_name] = pd.Series(new_column, index=indexes)
     if dummies:
@@ -10,6 +13,9 @@ def insert_column(dataframe, new_column, column_name, dummies=False, label_prefi
 
 
 def medication_score(dataframe, filename):
+    '''
+    Função para atribuir um score (contagem) a cada tweet, dependendo se possui ou não medicamentos na lista 'filename'
+    '''
     res = []
     for tweet_list in dataframe.tweet:
         score = 0
@@ -23,6 +29,9 @@ def medication_score(dataframe, filename):
     return dataframe
 
 def add_tweet_info(df):
+    '''
+    Função para retirar informações adicionais quanto à estrutura do tweet (tamanho, nº de palavras, nº de hashtags, etc.)
+    '''
     df['tweet_length'] = df['tweet'].str.len()
     df['num_hashtags'] = df['tweet'].str.count('#')
     df['num_exclamation_marks'] = df['tweet'].str.count('\!')
