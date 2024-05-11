@@ -1,7 +1,9 @@
-pipeline_data_analysis.ipynb -> análise da estrutura e conteúdos dos tweets dos datasets de treino e teste
+### Pipeline Notebooks Overview:
 
-pipeline_default.ipynb  -> modelos default
+- **pipeline_data_analysis.ipynb**: Conducts a comprehensive analysis of tweet structures and contents from both training and testing datasets.
 
-pipeline_smote.ipynb  -> modelos com otimização de hiperparâmetros e SMOTE
+- **pipeline_default.ipynb**: Implements baseline models with default settings.
 
-pipeline_without_smote.ipynb  -> modelos apenas com otimização de hiperparâmetros
+- **pipeline_smote.ipynb**: Implements models with optimized hyperparameters and incorporates SMOTE (Synthetic Minority Over-sampling Technique) for handling imbalanced data.
+
+- **pipeline_without_smote.ipynb**: Implements models with hyperparameter optimization only, excluding SMOTE.
