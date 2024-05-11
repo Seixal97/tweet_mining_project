@@ -1,4 +1,4 @@
-# Data Mining Project
+# Tweet Mining Project
 
 ## Overview
 
