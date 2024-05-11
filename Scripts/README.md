@@ -1,5 +1,7 @@
-add_features.py -> funcões auxiliares de feature engineering
+### Additional Python Scripts:
 
-dataset_analysis.py -> funções auxiliares para análise dos datasets
+- **add_features.py**: Contains auxiliary functions for feature engineering.
 
-process.py -> funções auxiliares para pré-processamento dos tweets
+- **dataset_analysis.py**: Contains auxiliary functions for dataset analysis.
+
+- **process.py**: Contains auxiliary functions for tweet preprocessing.
