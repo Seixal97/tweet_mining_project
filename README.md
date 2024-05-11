@@ -1,9 +1,13 @@
-# Projeto em Bioinformática 2022/2023
+# Data Mining Project
 
-## Paulo Seixal
+## Overview
 
-Pasta 'Data' -> datasets e lista de medicamentos
+This repository contains datasets and a list of medications under the `Data` folder, implemented pipelines in the `Pipelines` folder, and auxiliary functions used throughout the pipelines in the `Scripts` folder.
 
-Pasta 'Pipelines' -> Pipelines implementadas no projeto
+## Contents
 
-Pasta 'Scripts' -> Scripts com as funções auxiliares usadas ao longo das pipelines
+- **Data**: This folder contains datasets and a list of medications.
+- **Pipelines**: Implemented pipelines for data mining tasks.
+- **Scripts**: Collection of auxiliary functions used within the pipelines.
+
+Feel free to explore the folders for more information on the project.
